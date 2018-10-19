@@ -31,6 +31,7 @@ public class ComplaintData {
 	private Date OpenedDateTime;
 	@UpdateTimestamp
 	private Date closedDateTime;
+	private Date closedDate;
     
     public ComplaintData() {
     	
@@ -108,6 +109,14 @@ public class ComplaintData {
 
 	public void setClosedDateTime(Date closedDateTime) {
 		this.closedDateTime = closedDateTime;
+	}
+
+	public Date getClosedDate() {
+		return closedDate;
+	}
+
+	public void setClosedDate(Date closedDate) {
+		this.closedDate = closedDate;
 	}
     
     

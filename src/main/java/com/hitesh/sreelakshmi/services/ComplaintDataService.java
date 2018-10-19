@@ -1,5 +1,6 @@
 package com.hitesh.sreelakshmi.services;
 
+import java.util.Date;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
@@ -31,6 +32,7 @@ public class ComplaintDataService {
 	public String saveInputData(ComplaintData dataInfo) {
 
 		try {
+			dataInfo.setOpenedDateTime(new Date());
 			complaintDataRepository.saveAndFlush(dataInfo);
 			return "DATA INSERTED SUCESSFULY";
 		}catch(Exception e) {
